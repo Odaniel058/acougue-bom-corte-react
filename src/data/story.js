@@ -1,0 +1,13 @@
+export const story = [
+  "A história do Bom Corte começou com um pequeno balcão de carnes na Tijuca, daqueles em que o cliente chegava, cumprimentava quem estava trabalhando e já puxava conversa sobre o almoço. O movimento acompanhava a rotina do bairro: compras rápidas durante a semana, pedidos para o domingo e a escolha caprichada da carne para reunir a família.",
+  "Nos primeiros tempos, o atendimento era feito de perto, entre a balança, a tábua de corte e o caderno de encomendas. Tinha quem pedisse a carne moída na hora, quem preferisse o bife mais fino e quem deixasse a escolha por conta do açougueiro. Aos poucos, esses hábitos foram ficando conhecidos, e muita gente passou a encontrar no balcão alguém que já sabia como preparar o seu pedido.",
+  "As manhãs de sábado sempre tiveram um ritmo próprio. Enquanto um cliente escolhia a costela para assar devagar, outro perguntava qual corte rendia melhor na panela. Entre uma encomenda e outra, surgiam dicas de tempero, notícias da vizinhança e receitas que acabavam entrando no cardápio de outras casas. Foi assim, no dia a dia, que o Bom Corte foi fazendo parte da vida do bairro.",
+  "Com o passar do tempo, filhos passaram a fazer as compras que antes acompanhavam com os pais, novos moradores chegaram e os pedidos também mudaram. O açougue ampliou as opções de carnes bovinas, suínas e aves, mantendo o costume de ouvir primeiro o que o cliente pretende cozinhar para depois ajudar na escolha do corte e da quantidade.",
+  "Hoje, o Bom Corte reúne esse jeito de atender com a praticidade de consultar os cortes e conversar pelo WhatsApp. É possível combinar a retirada no local ou o delivery, conferindo antes os valores e as condições de entrega. E, para quem passa pela Tijuca, o balcão continua sendo lugar de escolher a carne, tirar uma dúvida sobre o preparo e colocar a conversa em dia."
+];
+
+export const benefits = [
+  "Carnes selecionadas",
+  "Cortes frescos",
+  "Atendimento de qualidade"
+];
