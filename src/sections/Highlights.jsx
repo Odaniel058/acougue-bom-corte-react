@@ -7,11 +7,20 @@ export default function Highlights() {
   return (
     <section className="featured section-space" aria-labelledby="titulo-destaques">
       <div className="container">
-        <div className="section-heading"><h2 id="titulo-destaques">Cortes em destaque</h2><a className="text-link" href="#cortes">Ver todos os cortes</a></div>
+        <div className="section-heading">
+          <h2 id="titulo-destaques">Cortes em destaque</h2>
+          <a className="text-link" href="#cortes">
+            Ver todos os cortes
+          </a>
+        </div>
         <div className="row g-4">
-          {products.filter((product) => highlightedIds.includes(product.id)).map((product) => (
-            <div className="col-12 col-md-6 col-lg-4" key={product.id}><ProductCard product={product} featured /></div>
-          ))}
+          {products
+            .filter((product) => highlightedIds.includes(product.id))
+            .map((product) => (
+              <div className="col-12 col-md-6 col-lg-4" key={product.id}>
+                <ProductCard product={product} featured />
+              </div>
+            ))}
         </div>
       </div>
     </section>

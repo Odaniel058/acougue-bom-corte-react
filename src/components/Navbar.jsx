@@ -6,20 +6,50 @@ export default function Navbar() {
 
   return (
     <header className="site-header">
-      <nav className="navbar navbar-expand-md" data-bs-theme="dark" aria-label="Navegação principal" onKeyDown={(event) => { if (event.key === 'Escape') { setMenuOpen(false); document.getElementById('menu-button').focus(); } }}>
+      <nav
+        className="navbar navbar-expand-md"
+        data-bs-theme="dark"
+        aria-label="Navegação principal"
+        onKeyDown={(event) => {
+          if (event.key === 'Escape') {
+            setMenuOpen(false);
+            document.getElementById('menu-button').focus();
+          }
+        }}
+      >
         <div className="container">
-          <a className="navbar-brand brand" href="#inicio" onClick={() => setMenuOpen(false)} aria-label="Açougue Bom Corte — início">
+          <a
+            className="navbar-brand brand"
+            href="#inicio"
+            onClick={() => setMenuOpen(false)}
+            aria-label="Açougue Bom Corte — início"
+          >
             <span className="brand-kicker">AÇOUGUE</span>
-            <span className="brand-name">Bom Corte<span className="brand-dot">.</span></span>
+            <span className="brand-name">
+              Bom Corte<span className="brand-dot">.</span>
+            </span>
           </a>
-          <button id="menu-button" className="navbar-toggler" type="button" aria-controls="menuPrincipal" aria-expanded={menuOpen} aria-label={menuOpen ? 'Fechar menu' : 'Abrir menu'} onClick={() => setMenuOpen(!menuOpen)}>
+          <button
+            id="menu-button"
+            className="navbar-toggler"
+            type="button"
+            aria-controls="menuPrincipal"
+            aria-expanded={menuOpen}
+            aria-label={menuOpen ? 'Fechar menu' : 'Abrir menu'}
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
             <span className="navbar-toggler-icon" />
           </button>
-          <div className={'collapse navbar-collapse' + (menuOpen ? ' show' : '')} id="menuPrincipal">
+          <div
+            className={'collapse navbar-collapse' + (menuOpen ? ' show' : '')}
+            id="menuPrincipal"
+          >
             <ul className="navbar-nav ms-auto">
               {navigation.map((item) => (
                 <li className="nav-item" key={item.id}>
-                  <a className="nav-link" href={'#' + item.id} onClick={() => setMenuOpen(false)}>{item.label}</a>
+                  <a className="nav-link" href={'#' + item.id} onClick={() => setMenuOpen(false)}>
+                    {item.label}
+                  </a>
                 </li>
               ))}
             </ul>

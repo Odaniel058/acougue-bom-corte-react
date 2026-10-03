@@ -6,9 +6,13 @@ import BackToTop from './components/BackToTop';
 export default function App() {
   return (
     <>
-      <a className="skip-link" href="#conteudo">Pular para o conteúdo</a>
+      <a className="skip-link" href="#conteudo">
+        Pular para o conteúdo
+      </a>
       <Navbar />
-      <main id="conteudo" tabIndex="-1"><LandingPage /></main>
+      <main id="conteudo" tabIndex="-1">
+        <LandingPage />
+      </main>
       <Footer />
       <BackToTop />
     </>

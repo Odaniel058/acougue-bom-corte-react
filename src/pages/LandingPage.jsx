@@ -11,17 +11,19 @@ import FAQ from '../sections/FAQ';
 import FinalCTA from '../sections/FinalCTA';
 
 export default function LandingPage() {
-  return <>
-    <Hero />
-    <Benefits />
-    <About />
-    <Highlights />
-    <Catalog />
-    <Kits />
-    <Contact />
-    <Location />
-    <ContactGuide />
-    <FAQ />
-    <FinalCTA />
-  </>;
+  return (
+    <>
+      <Hero />
+      <Benefits />
+      <About />
+      <Highlights />
+      <Catalog />
+      <Kits />
+      <Contact />
+      <Location />
+      <ContactGuide />
+      <FAQ />
+      <FinalCTA />
+    </>
+  );
 }
