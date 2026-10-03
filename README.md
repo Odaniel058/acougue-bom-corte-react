@@ -77,7 +77,8 @@ Envie pelo Git para preservar os commits incrementais. Não envie `node_modules`
 
 ## Conferência
 
-- Lint e build de produção.
+- Lint e build de produção, também executados em um clone local limpo com `npm ci`.
+- Preview de produção conferido no navegador, incluindo teclado, Escape no menu e movimento reduzido.
 - Um h1, um menu principal e um rodapé; sem IDs duplicados ou links para os antigos HTMLs.
 - Telas de 320, 390, 768 e 1440 px sem rolagem horizontal.
 - Menu mobile, navegação por âncoras e botão de voltar ao topo.
