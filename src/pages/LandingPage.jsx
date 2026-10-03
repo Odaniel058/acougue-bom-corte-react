@@ -1,8 +1,10 @@
+import Catalog from '../sections/Catalog';
+import Kits from '../sections/Kits';
 import Hero from '../sections/Hero';
 import Benefits from '../sections/Benefits';
 import About from '../sections/About';
 import Highlights from '../sections/Highlights';
 
 export default function LandingPage() {
-  return <><Hero /><Benefits /><About /><Highlights /></>;
+  return <><Hero /><Benefits /><About /><Highlights /><Catalog /><Kits /></>;
 }
