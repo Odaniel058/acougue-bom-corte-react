@@ -24,6 +24,8 @@ npm run dev
 
 Abra o endereço mostrado pelo Vite no terminal. O React deve ser aberto pelo servidor, não clicando duas vezes no HTML.
 
+No Windows, com as dependências instaladas, você também pode dar dois cliques em `iniciar-site.cmd`. Ele inicia o servidor e abre o navegador. Mantenha a janela do terminal aberta enquanto usa o site.
+
 Para conferir o código e gerar a versão de produção:
 
 ```bash
