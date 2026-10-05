@@ -9,9 +9,9 @@ Landing page do trabalho final de Front-end, feita com React, Vite e Bootstrap 5
 - **Repositório original:** https://github.com/Odaniel058/Trabalho-Front-ll
 - **Site original:** https://odaniel058.github.io/Trabalho-Front-ll/
 - **Novo repositório público:** https://github.com/Odaniel058/acougue-bom-corte-react
-- **Site no Netlify:** pendente de conexão do novo repositório e publicação.
+- **Site no Netlify:** https://acouguebomcorte.netlify.app/
 
-Preencher o link do Netlify acima antes da entrega. Este é um projeto acadêmico: história, horários e dados de atendimento foram mantidos do exercício original e não representam uma operação comercial verificada. O Instagram leva à página geral da plataforma.
+Este é um projeto acadêmico: história, horários e dados de atendimento foram mantidos do exercício original e não representam uma operação comercial verificada. O Instagram leva à página geral da plataforma.
 
 ## Como rodar
 
@@ -63,21 +63,15 @@ As fotos, a paleta escura, as fontes Montserrat e Playfair Display e o conteúdo
 
 ## Publicação no GitHub e Netlify
 
-1. Crie um **novo repositório público e vazio** no GitHub. Não inicialize com README ou outros arquivos, pois este projeto já tem histórico Git.
-2. No terminal desta pasta, execute os comandos abaixo substituindo `NOME-DO-NOVO-REPOSITORIO` pelo nome escolhido:
+O site está publicado em https://acouguebomcorte.netlify.app/ e conectado ao repositório individual no GitHub.
 
-```bash
-git remote add origin https://github.com/Odaniel058/NOME-DO-NOVO-REPOSITORIO.git
-git push -u origin main
-```
+O arquivo `netlify.toml` configura o comando `npm run build`, a pasta `dist` e o Node.js 24. Após enviar novos commits com `git push`, confira o deploy no painel do Netlify e teste o link publicado.
 
-3. No Netlify, importe o novo repositório do GitHub. O arquivo `netlify.toml` configura `npm run build` e a pasta `dist`.
-4. Abra a URL publicada, confira o menu, as fotos, os filtros e o mapa no computador e no celular.
-5. Atualize os links deste README e faça um novo commit antes de enviar a atividade.
-
-Envie pelo Git para preservar os commits incrementais. Não envie `node_modules` nem `dist`; o Netlify instala as dependências e gera o site. A versão antiga permanece no repositório anterior.
+Envie pelo Git para preservar os commits. As pastas `node_modules` e `dist` ficam fora do repositório; o Netlify instala as dependências e gera o site.
 
 ## Conferência
+
+A versão pública foi testada em 05/10/2026, sem login: carregamento do React, imagens, filtros do catálogo e menu no celular.
 
 - Lint e build de produção, também executados em um clone local limpo com `npm ci`.
 - Preview de produção conferido no navegador, incluindo teclado, Escape no menu e movimento reduzido.

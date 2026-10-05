@@ -37,7 +37,7 @@ No CSS, mostre `position: sticky`, `scroll-behavior: smooth` e `scroll-margin-to
 
 ## 4:45–5:30 — Organização e publicação
 
-Mostre `referencia-html/`, o README e o histórico de commits. Explique que `npm run build` gera `dist`, e que o Netlify publica essa pasta a partir do repositório GitHub. Só diga que está publicado depois de conferir a URL real.
+Mostre `referencia-html/`, o README e o histórico de commits. Explique que `npm run build` gera `dist`, e que o Netlify publica essa pasta a partir do repositório GitHub. Abra a versão pública em https://acouguebomcorte.netlify.app/.
 
 ## 5:30–6:00 — Fechamento e demonstração
 
@@ -45,7 +45,7 @@ Mostre o contato e o mapa. Destaque que os quatro conteúdos continuam disponív
 
 ## Antes da entrega
 
-- Preencher os links reais do novo GitHub e do Netlify no README.
+- Entregar os links do GitHub e do Netlify que estão no README.
 - Conferir a versão publicada em computador e celular.
 - Treinar o roteiro com cronômetro.
 - Confirmar com o professor o horário limite: o PDF informa 17h e 18h30 em trechos diferentes. Para evitar atraso, usar 17h de 06/10/2026 como referência mais cedo.
