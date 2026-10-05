@@ -145,11 +145,18 @@ main[id] {
 
 /* Topo e menu */
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: 100;
+  background: rgb(18 18 16 / 58%);
+  border-bottom: 1px solid rgb(243 238 229 / 16%);
+}
+
+.site-header.scrolled {
   background: var(--charcoal);
-  border-bottom: 1px solid #3c3831;
+  border-bottom-color: #3c3831;
 }
 
 .navbar {
@@ -215,8 +222,9 @@ main[id] {
   isolation: isolate;
   display: flex;
   align-items: center;
-  min-height: min(780px, calc(100svh - 88px));
-  padding-block: 80px;
+  min-height: min(860px, 100svh);
+  padding-top: 160px;
+  padding-bottom: 80px;
   background: var(--charcoal);
   color: var(--cream);
 }
@@ -868,6 +876,12 @@ main[id] {
 }
 
 @media (max-width: 767.98px) {
+  .site-header {
+    position: sticky;
+    background: var(--charcoal);
+    border-bottom-color: #3c3831;
+  }
+
   .container {
     padding-inline: 22px;
   }

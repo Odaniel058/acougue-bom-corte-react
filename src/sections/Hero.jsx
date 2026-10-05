@@ -1,5 +1,3 @@
-import { whatsappUrl } from '../data/site';
-
 export default function Hero() {
   return (
     <section className="hero" id="inicio" aria-labelledby="titulo-inicio">
@@ -27,14 +25,8 @@ export default function Hero() {
               <a className="text-link" href="#cortes">
                 Conheça nossos cortes
               </a>
-              <a
-                className="text-link"
-                href={whatsappUrl()}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Falar pelo WhatsApp em nova aba"
-              >
-                Fale pelo WhatsApp
+              <a className="text-link" href="#contato">
+                Contato
               </a>
             </div>
           </div>
