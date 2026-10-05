@@ -794,7 +794,7 @@ main[id] {
 
 .back-to-top {
   position: fixed;
-  right: max(16px, env(safe-area-inset-right));
+  left: max(16px, env(safe-area-inset-left));
   bottom: max(16px, env(safe-area-inset-bottom));
   z-index: 10;
   display: inline-flex;
