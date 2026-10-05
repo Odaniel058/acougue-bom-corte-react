@@ -43,7 +43,7 @@ npm run preview
 | cortes.html | 14 carnes, filtro de categorias e 2 kits | Catalog, Kits, ProductCard |
 | contato.html | Endereço, telefone, horários, retirada, delivery, mapa, orientações e dúvidas | Contact, Location, ContactGuide, FAQ, FinalCTA |
 
-O menu usa as âncoras `#inicio`, `#sobre`, `#cortes`, `#kits` e `#contato`. Existe um único menu principal, um único rodapé e um único h1. O cabeçalho fica fixo durante a rolagem; `scroll-margin-top` deixa espaço acima das seções. A rolagem suave respeita a preferência por movimento reduzido.
+O menu usa as âncoras `#inicio`, `#sobre`, `#cortes`, `#kits` e `#contato`. Existe um único menu principal, um único rodapé e um único h1. O cabeçalho permanece no início da página e sai da tela ao rolar; `scroll-margin-top` deixa espaço acima das seções. A rolagem suave respeita a preferência por movimento reduzido.
 
 ## Organização
 

@@ -8,7 +8,7 @@ Mostre a Home e explique que o Açougue Bom Corte era um site com quatro página
 
 ## 0:45–1:30 — Navegação e identidade
 
-Mostre o menu rolando para história, cortes, kits e contato. As cores, fontes e fotografias foram mantidas. Há um único header, footer e h1. Mostre também o menu no celular e o botão de voltar ao topo. A hero mantém a foto atrás do menu, como no site original. No Navbar, o `useEffect` acompanha a rolagem e atualiza o estado `scrolled` para deixar o fundo do menu escuro fora do topo; ao desmontar o componente, remove o evento.
+Mostre o menu rolando para história, cortes, kits e contato. As cores, fontes e fotografias foram mantidas. Há um único header, footer e h1. Mostre também o menu no celular e o botão de voltar ao topo. A hero mantém a foto atrás do menu, como no site original. O menu fica no início da página e sai da tela durante a rolagem.
 
 ## 1:30–2:30 — Componentes e JSX
 
@@ -33,7 +33,7 @@ Demonstre o filtro funcionando.
 
 Mostre as classes Bootstrap `row`, `col-md-6` e `col-lg-4`: uma coluna no celular, duas em telas médias e três nas grandes.
 
-No CSS, mostre o menu com `position: fixed` no computador e `sticky` no celular, além de `scroll-behavior: smooth` e `scroll-margin-top`. Explique o foco visível, os textos alternativos das imagens e a preferência por movimento reduzido.
+No CSS, mostre o menu com `position: absolute` no computador e `relative` no celular, além de `scroll-behavior: smooth` e `scroll-margin-top`. Explique o foco visível, os textos alternativos das imagens e a preferência por movimento reduzido.
 
 ## 4:45–5:30 — Organização e publicação
 

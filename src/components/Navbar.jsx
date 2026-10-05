@@ -1,21 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { navigation } from '../data/site';
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  // Deixa o menu escuro quando a página sai do topo.
-  useEffect(() => {
-    function updateHeader() {
-      setScrolled(window.scrollY > 40);
-    }
-
-    updateHeader();
-    window.addEventListener('scroll', updateHeader, { passive: true });
-    return () => window.removeEventListener('scroll', updateHeader);
-  }, []);
-
   function closeMenu() {
     setMenuOpen(false);
   }
@@ -28,7 +15,7 @@ export default function Navbar() {
   }
 
   return (
-    <header className={scrolled ? 'site-header scrolled' : 'site-header'}>
+    <header className="site-header">
       <nav
         className="navbar navbar-expand-md"
         data-bs-theme="dark"

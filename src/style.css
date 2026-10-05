@@ -145,18 +145,13 @@ main[id] {
 
 /* Topo e menu */
 .site-header {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 100;
   background: rgb(18 18 16 / 58%);
   border-bottom: 1px solid rgb(243 238 229 / 16%);
-}
-
-.site-header.scrolled {
-  background: var(--charcoal);
-  border-bottom-color: #3c3831;
 }
 
 .navbar {
@@ -877,7 +872,7 @@ main[id] {
 
 @media (max-width: 767.98px) {
   .site-header {
-    position: sticky;
+    position: relative;
     background: var(--charcoal);
     border-bottom-color: #3c3831;
   }
