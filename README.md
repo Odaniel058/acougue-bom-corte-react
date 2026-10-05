@@ -8,10 +8,10 @@ Landing page do trabalho final de Front-end, feita com React, Vite e Bootstrap 5
 - **Trabalho individual:** as quatro páginas originais foram desenvolvidas pelo aluno, com autorização do professor para fazer o trabalho sozinho.
 - **Repositório original:** https://github.com/Odaniel058/Trabalho-Front-ll
 - **Site original:** https://odaniel058.github.io/Trabalho-Front-ll/
-- **Novo repositório público:** pendente de criação e publicação no GitHub.
+- **Novo repositório público:** https://github.com/Odaniel058/acougue-bom-corte-react
 - **Site no Netlify:** pendente de conexão do novo repositório e publicação.
 
-Preencher os dois links pendentes acima antes da entrega. Este é um projeto acadêmico: história, horários e dados de atendimento foram mantidos do exercício original e não representam uma operação comercial verificada. O Instagram leva à página geral da plataforma.
+Preencher o link do Netlify acima antes da entrega. Este é um projeto acadêmico: história, horários e dados de atendimento foram mantidos do exercício original e não representam uma operação comercial verificada. O Instagram leva à página geral da plataforma.
 
 ## Como rodar
 
