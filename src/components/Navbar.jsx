@@ -4,24 +4,30 @@ import { navigation } from '../data/site';
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  function closeMenu() {
+    setMenuOpen(false);
+  }
+
+  function handleKeyDown(event) {
+    if (event.key === 'Escape' && menuOpen) {
+      closeMenu();
+      document.getElementById('menu-button').focus();
+    }
+  }
+
   return (
     <header className="site-header">
       <nav
         className="navbar navbar-expand-md"
         data-bs-theme="dark"
         aria-label="Navegação principal"
-        onKeyDown={(event) => {
-          if (event.key === 'Escape') {
-            setMenuOpen(false);
-            document.getElementById('menu-button').focus();
-          }
-        }}
+        onKeyDown={handleKeyDown}
       >
         <div className="container">
           <a
             className="navbar-brand brand"
             href="#inicio"
-            onClick={() => setMenuOpen(false)}
+            onClick={closeMenu}
             aria-label="Açougue Bom Corte — início"
           >
             <span className="brand-kicker">AÇOUGUE</span>
@@ -47,7 +53,7 @@ export default function Navbar() {
             <ul className="navbar-nav ms-auto">
               {navigation.map((item) => (
                 <li className="nav-item" key={item.id}>
-                  <a className="nav-link" href={'#' + item.id} onClick={() => setMenuOpen(false)}>
+                  <a className="nav-link" href={'#' + item.id} onClick={closeMenu}>
                     {item.label}
                   </a>
                 </li>

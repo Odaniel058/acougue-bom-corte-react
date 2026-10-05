@@ -1,16 +1,17 @@
 import { useState } from 'react';
-import { products, categories } from '../data/products';
+import { products, categories, kits } from '../data/products';
 import ProductCard from '../components/ProductCard';
+
+const filters = [{ id: 'todas', label: 'Todas' }, ...categories];
 
 export default function Catalog() {
   const [selectedCategory, setSelectedCategory] = useState('todas');
-  const filters = [{ id: 'todas', label: 'Todas' }, ...categories];
   const visibleCategories = categories.filter(
     (category) => selectedCategory === 'todas' || category.id === selectedCategory,
   );
-  const count = products.filter(
+  const visibleProducts = products.filter(
     (product) => selectedCategory === 'todas' || product.category === selectedCategory,
-  ).length;
+  );
 
   return (
     <section className="catalog-landing section-space" id="cortes" aria-labelledby="titulo-cortes">
@@ -45,23 +46,27 @@ export default function Catalog() {
           </a>
         </div>
         <p className="catalog-count" role="status">
-          {count} opções de carnes · 2 kits para churrasco
+          {visibleProducts.length} opções de carnes · {kits.length} kits para churrasco
         </p>
         <div id="lista-cortes">
-          {visibleCategories.map((category) => (
-            <div className="catalog-section" key={category.id}>
-              <p className="catalog-category">{category.title}</p>
-              <div className="row g-4">
-                {products
-                  .filter((product) => product.category === category.id)
-                  .map((product) => (
+          {visibleCategories.map((category) => {
+            const categoryProducts = visibleProducts.filter(
+              (product) => product.category === category.id,
+            );
+
+            return (
+              <div className="catalog-section" key={category.id}>
+                <p className="catalog-category">{category.title}</p>
+                <div className="row g-4">
+                  {categoryProducts.map((product) => (
                     <div className="col-12 col-md-6 col-lg-4" key={product.id}>
                       <ProductCard product={product} />
                     </div>
                   ))}
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

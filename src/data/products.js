@@ -8,8 +8,6 @@ export const products = [
     preparation: 'Assada ou grelhada',
     image: '/images/alcatra-v2.webp',
     alt: 'Alcatra crua em peça e bifes sobre tábua escura',
-    width: 1448,
-    height: 1086,
   },
   {
     id: 'contra-file',
@@ -20,8 +18,6 @@ export const products = [
     preparation: 'Na churrasqueira ou na frigideira',
     image: '/images/contra-file-v2.webp',
     alt: 'Bifes crus de contra-filé com gordura lateral sobre tábua escura',
-    width: 1448,
-    height: 1086,
   },
   {
     id: 'patinho',
@@ -32,8 +28,6 @@ export const products = [
     preparation: 'Moído, em bifes ou em cubos',
     image: '/images/patinho-v2.webp',
     alt: 'Patinho cru em peça e fatias sobre tábua escura',
-    width: 1448,
-    height: 1086,
   },
   {
     id: 'picanha',
@@ -44,8 +38,6 @@ export const products = [
     preparation: 'Na churrasqueira, em peça ou bifes',
     image: '/images/picanha.webp',
     alt: 'Picanha crua com capa de gordura e dois bifes sobre tábua escura',
-    width: 1448,
-    height: 1086,
   },
   {
     id: 'fraldinha',
@@ -56,8 +48,6 @@ export const products = [
     preparation: 'Na churrasqueira ou no forno',
     image: '/images/fraldinha.webp',
     alt: 'Peça de fraldinha crua com fibras aparentes sobre tábua escura',
-    width: 1448,
-    height: 1086,
   },
   {
     id: 'maminha',
@@ -68,8 +58,6 @@ export const products = [
     preparation: 'Assada ou grelhada',
     image: '/images/maminha.webp',
     alt: 'Maminha crua em peça e fatias sobre tábua escura',
-    width: 1448,
-    height: 1086,
   },
   {
     id: 'costela-suina',
@@ -80,8 +68,6 @@ export const products = [
     preparation: 'No forno ou na churrasqueira',
     image: '/images/costela-suina-v2.webp',
     alt: 'Costela suína crua em peça e porções sobre tábua escura',
-    width: 1448,
-    height: 1086,
   },
   {
     id: 'lombo-suino',
@@ -92,8 +78,6 @@ export const products = [
     preparation: 'Assado ou em medalhões',
     image: '/images/lombo-suino-v2.webp',
     alt: 'Lombo suíno cru em peça e medalhões sobre tábua escura',
-    width: 1448,
-    height: 1086,
   },
   {
     id: 'panceta',
@@ -104,8 +88,6 @@ export const products = [
     preparation: 'No forno ou na churrasqueira',
     image: '/images/panceta.webp',
     alt: 'Panceta suína crua em peça e tiras sobre tábua escura',
-    width: 1448,
-    height: 1086,
   },
   {
     id: 'linguica-toscana',
@@ -116,8 +98,6 @@ export const products = [
     preparation: 'Na churrasqueira ou no forno',
     image: '/images/linguica-toscana.webp',
     alt: 'Linguiças toscanas frescas sobre tábua escura',
-    width: 1448,
-    height: 1086,
   },
   {
     id: 'peito-de-frango',
@@ -128,8 +108,6 @@ export const products = [
     preparation: 'Grelhado, desfiado ou em tiras',
     image: '/images/peito-de-frango-v2.webp',
     alt: 'Filés crus de peito de frango sobre tábua escura',
-    width: 1448,
-    height: 1086,
   },
   {
     id: 'coxa-e-sobrecoxa',
@@ -140,8 +118,6 @@ export const products = [
     preparation: 'Assada ou ensopada',
     image: '/images/coxa-e-sobrecoxa.webp',
     alt: 'Coxas e sobrecoxas de frango cruas com pele sobre tábua escura',
-    width: 1448,
-    height: 1086,
   },
   {
     id: 'asa-de-frango',
@@ -152,8 +128,6 @@ export const products = [
     preparation: 'Assada ou na churrasqueira',
     image: '/images/asa-de-frango.webp',
     alt: 'Asas de frango cruas sobre tábua escura',
-    width: 1448,
-    height: 1086,
   },
   {
     id: 'coracao-de-frango',
@@ -164,8 +138,6 @@ export const products = [
     preparation: 'Em espetinhos na churrasqueira',
     image: '/images/coracao-de-frango.webp',
     alt: 'Corações de frango crus sobre tábua escura',
-    width: 1448,
-    height: 1086,
   },
 ];
 

@@ -6,8 +6,8 @@ export default function ProductCard({ product, featured = false }) {
       <img
         className="product-image"
         src={product.image}
-        width={product.width}
-        height={product.height}
+        width="1448"
+        height="1086"
         alt={product.alt}
         loading="lazy"
         decoding="async"

@@ -18,6 +18,7 @@ export const questions = [
     question: 'Onde encontro a lista de cortes?',
     answer:
       'Na seção Nossos cortes, você encontra fotos, descrições e sugestões de preparo de carnes bovinas, suínas e aves.',
+    link: { href: '#cortes', text: 'Ver catálogo' },
   },
   {
     question: 'Como consultar preços e disponibilidade?',

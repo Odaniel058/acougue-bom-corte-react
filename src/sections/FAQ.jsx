@@ -14,13 +14,12 @@ export default function FAQ() {
               <details className="faq-item" key={item.question} open={index === 0}>
                 <summary>{item.question}</summary>
                 <p>
-                  {index === 0 ? (
+                  {item.answer}
+                  {item.link && (
                     <>
-                      Na seção <a href="#cortes">Nossos cortes</a>, você encontra fotos, descrições
-                      e sugestões de preparo de carnes bovinas, suínas e aves.
+                      {' '}
+                      <a href={item.link.href}>{item.link.text}</a>
                     </>
-                  ) : (
-                    item.answer
                   )}
                 </p>
               </details>

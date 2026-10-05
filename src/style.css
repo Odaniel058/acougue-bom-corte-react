@@ -14,17 +14,22 @@
 }
 
 /* Estilo geral */
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   color: var(--cream);
   background: var(--ink);
   font-family: 'Montserrat', sans-serif;
   font-size: 0.94rem;
   line-height: 1.8;
   -webkit-font-smoothing: antialiased;
+}
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 h1,
@@ -87,6 +92,13 @@ img {
   color: var(--white);
   background: var(--wine);
 }
+.section-kicker {
+  color: var(--sand);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  margin-bottom: 18px;
+}
 
 .section-space {
   padding-block: 76px;
@@ -125,6 +137,10 @@ img {
 
 main {
   flex: 1;
+}
+section[id],
+main[id] {
+  scroll-margin-top: 112px;
 }
 
 /* Topo e menu */
@@ -182,15 +198,8 @@ main {
   transition: color 180ms ease;
 }
 
-.navbar .nav-link:hover,
-.navbar .nav-link.active {
+.navbar .nav-link:hover {
   color: var(--sand);
-}
-
-.navbar .nav-link.active {
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 10px;
 }
 
 .navbar-toggler {
@@ -394,8 +403,56 @@ main {
   text-decoration-thickness: 2px;
 }
 
+/* Catálogo e filtros */
+.catalog-landing {
+  border-top: 1px solid var(--line);
+  padding-bottom: 0;
+}
+.catalog-intro {
+  max-width: 450px;
+  font-size: 0.87rem;
+  margin: 0;
+}
+.catalog-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 28px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+}
+.filter-button {
+  min-height: 44px;
+  padding: 8px 0;
+  background: transparent;
+  color: var(--muted);
+  border: 0;
+  border-bottom: 2px solid transparent;
+  font-size: 0.83rem;
+}
+.filter-button:hover,
+.filter-button[aria-pressed='true'] {
+  color: var(--sand);
+  border-bottom-color: var(--sand);
+}
+.catalog-count {
+  margin: 18px 0 36px;
+  font-size: 0.75rem;
+}
+.catalog-category {
+  color: var(--sand);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
 .catalog-section {
   margin-bottom: 54px;
+}
+.catalog-section:last-child {
+  margin-bottom: 0;
 }
 
 /* Kits de churrasco */
@@ -483,6 +540,13 @@ main {
 
 .about-story p:last-child {
   margin-bottom: 0;
+}
+.about-lead {
+  color: var(--cream);
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  margin-top: 26px;
 }
 
 /* Contato */
@@ -706,6 +770,11 @@ main {
   margin-bottom: 16px;
   color: var(--sand);
 }
+.footer-address {
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-style: normal;
+}
 
 .footer-bottom {
   display: flex;
@@ -719,6 +788,31 @@ main {
 .footer-bottom small {
   font-size: 0.66rem;
   color: #bfb5a6;
+}
+
+/* Botão para voltar ao topo */
+
+.back-to-top {
+  position: fixed;
+  right: max(16px, env(safe-area-inset-right));
+  bottom: max(16px, env(safe-area-inset-bottom));
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border: 1px solid var(--sand);
+  border-radius: 50%;
+  background: var(--charcoal);
+  color: var(--sand);
+  text-decoration: none;
+  box-shadow: 0 3px 12px rgb(0 0 0 / 20%);
+}
+
+.back-to-top:hover {
+  background: var(--wine-dark);
+  color: var(--cream);
 }
 
 /* Ajustes para cada tamanho de tela */
@@ -851,127 +945,6 @@ main {
     flex-direction: column;
     gap: 5px;
   }
-}
-
-/* Botão para voltar ao topo */
-html {
-  scroll-behavior: smooth;
-}
-
-.back-to-top {
-  position: fixed;
-  right: max(16px, env(safe-area-inset-right));
-  bottom: max(16px, env(safe-area-inset-bottom));
-  z-index: 10;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 46px;
-  height: 46px;
-  border: 1px solid var(--sand);
-  border-radius: 50%;
-  background: var(--charcoal);
-  color: var(--sand);
-  text-decoration: none;
-  box-shadow: 0 3px 12px rgb(0 0 0 / 20%);
-}
-
-.back-to-top:hover {
-  background: var(--wine-dark);
-  color: var(--cream);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
-  .product-card,
-  .navbar .nav-link {
-    transition: none;
-  }
-
-  .product-card:hover {
-    transform: none;
-  }
-}
-
-/* Ajustes da página única */
-#root {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-section[id],
-main[id] {
-  scroll-margin-top: 112px;
-}
-.section-kicker {
-  color: var(--sand);
-  font-size: 0.65rem;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  margin-bottom: 18px;
-}
-.about-lead {
-  color: var(--cream);
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 1.5rem;
-  line-height: 1.4;
-  margin-top: 26px;
-}
-.catalog-landing {
-  border-top: 1px solid var(--line);
-  padding-bottom: 0;
-}
-.catalog-intro {
-  max-width: 450px;
-  font-size: 0.87rem;
-  margin: 0;
-}
-.catalog-filters {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 12px 28px;
-  padding-bottom: 16px;
-  border-bottom: 1px solid var(--line);
-}
-.filter-button {
-  min-height: 44px;
-  padding: 8px 0;
-  background: transparent;
-  color: var(--muted);
-  border: 0;
-  border-bottom: 2px solid transparent;
-  font-size: 0.83rem;
-}
-.filter-button:hover,
-.filter-button[aria-pressed='true'] {
-  color: var(--sand);
-  border-bottom-color: var(--sand);
-}
-.catalog-count {
-  margin: 18px 0 36px;
-  font-size: 0.75rem;
-}
-.catalog-category {
-  color: var(--sand);
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  margin-bottom: 24px;
-}
-.catalog-section:last-child {
-  margin-bottom: 0;
-}
-.footer-address {
-  color: var(--muted);
-  font-size: 0.8rem;
-  font-style: normal;
-}
-@media (max-width: 767.98px) {
   .navbar-collapse {
     position: absolute;
     top: 100%;
@@ -989,5 +962,20 @@ main[id] {
   }
   .contact-info-panel {
     padding: 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .product-card,
+  .navbar .nav-link {
+    transition: none;
+  }
+
+  .product-card:hover {
+    transform: none;
   }
 }

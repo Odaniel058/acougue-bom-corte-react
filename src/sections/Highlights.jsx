@@ -4,6 +4,8 @@ import { products } from '../data/products';
 const highlightedIds = ['alcatra', 'contra-file', 'costela-suina'];
 
 export default function Highlights() {
+  const highlightedProducts = products.filter((product) => highlightedIds.includes(product.id));
+
   return (
     <section className="featured section-space" aria-labelledby="titulo-destaques">
       <div className="container">
@@ -14,13 +16,11 @@ export default function Highlights() {
           </a>
         </div>
         <div className="row g-4">
-          {products
-            .filter((product) => highlightedIds.includes(product.id))
-            .map((product) => (
-              <div className="col-12 col-md-6 col-lg-4" key={product.id}>
-                <ProductCard product={product} featured />
-              </div>
-            ))}
+          {highlightedProducts.map((product) => (
+            <div className="col-12 col-md-6 col-lg-4" key={product.id}>
+              <ProductCard product={product} featured />
+            </div>
+          ))}
         </div>
       </div>
     </section>
