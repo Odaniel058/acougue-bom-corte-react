@@ -297,6 +297,76 @@ main[id] {
   margin: 0;
 }
 
+/* Carrossel dos destaques */
+.highlights-carousel {
+  max-width: 960px;
+  margin-inline: auto;
+}
+
+.highlights-carousel .product-card {
+  flex-direction: row;
+  box-shadow: none;
+  transform: none;
+}
+
+.highlights-carousel .product-card:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.highlights-carousel .product-image {
+  width: 50%;
+  flex-shrink: 0;
+}
+
+.highlights-carousel .product-card .card-body {
+  justify-content: center;
+  padding: 32px;
+}
+
+.highlights-carousel .product-inquiry {
+  margin-top: 20px;
+}
+
+.highlight-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 16px;
+}
+
+.highlight-control {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  background: transparent;
+}
+
+.highlight-control span {
+  width: 20px;
+  height: 20px;
+}
+
+.highlight-control:hover {
+  background: var(--surface);
+}
+
+.highlight-controls .carousel-indicators {
+  position: static;
+  margin: 0;
+}
+
+.highlight-controls .carousel-indicators button {
+  background-color: var(--sand);
+  border-top-width: 20px;
+  border-bottom-width: 20px;
+  height: 4px;
+}
+
 /* Faixa com os destaques */
 .benefits {
   padding-block: 28px;
@@ -871,6 +941,23 @@ main[id] {
 }
 
 @media (max-width: 767.98px) {
+  .highlights-carousel {
+    max-width: 420px;
+  }
+
+  .highlights-carousel .product-card {
+    flex-direction: column;
+  }
+
+  .highlights-carousel .product-image {
+    width: 100%;
+  }
+
+  .highlights-carousel .product-card .card-body {
+    min-height: 220px;
+    padding: 24px;
+  }
+
   .site-header {
     position: relative;
     background: var(--charcoal);
