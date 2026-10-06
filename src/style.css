@@ -478,9 +478,10 @@ main[id] {
 
 /* Catálogo e filtros */
 .catalog-landing {
-  border-top: 1px solid var(--line);
   padding-bottom: 0;
-}.catalog-filters {
+}
+
+.catalog-filters {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
