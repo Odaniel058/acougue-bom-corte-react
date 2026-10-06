@@ -1,18 +1,28 @@
 import SocialLinks from './SocialLinks';
-import { address } from '../data/site';
+import { address, navigation } from '../data/site';
 
 export default function Footer() {
   return (
     <footer className="site-footer">
       <div className="container">
         <div className="row gy-4 justify-content-between">
-          <div className="col-md-6">
+          <div className="col-md-4">
             <a className="footer-brand" href="#inicio">
               Açougue Bom Corte
             </a>
             <SocialLinks />
           </div>
-          <div className="col-md-5">
+          <nav className="col-md-3" aria-label="Navegação do rodapé">
+            <h2 className="footer-heading">Navegação</h2>
+            <ul className="footer-navigation">
+              {navigation.map((item) => (
+                <li key={item.id}>
+                  <a href={'#' + item.id}>{item.label}</a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          <div className="col-md-4">
             <h2 className="footer-heading">Na Tijuca</h2>
             <address className="footer-address">{address}</address>
             <a className="text-link" href="#contato">
