@@ -1,10 +1,14 @@
 import { useEffect, useRef } from 'react';
 import Carousel from 'bootstrap/js/dist/carousel';
 import ProductCard from '../components/ProductCard';
-import { products } from '../data/products';
+import { products, kits } from '../data/products';
 
 const highlightedIds = ['alcatra', 'contra-file', 'costela-suina'];
-const highlightedProducts = products.filter((product) => highlightedIds.includes(product.id));
+const highlightedKit = kits.find((kit) => kit.id === 'kit-churrasco-classico');
+const highlightedItems = [
+  { ...highlightedKit, label: 'KIT PARA CHURRASCO · ' + highlightedKit.weight },
+  ...products.filter((product) => highlightedIds.includes(product.id)),
+];
 
 export default function Highlights() {
   const carouselRef = useRef(null);
@@ -19,7 +23,7 @@ export default function Highlights() {
     <section className="featured section-space" aria-labelledby="titulo-destaques">
       <div className="container">
         <div className="section-heading">
-          <h2 id="titulo-destaques">Cortes em destaque</h2>
+          <h2 id="titulo-destaques">Carnes e kits em destaque</h2>
           <a className="text-link" href="#cortes">
             Ver todos os cortes
           </a>
@@ -28,17 +32,17 @@ export default function Highlights() {
           id="carrossel-destaques"
           className="carousel slide highlights-carousel"
           ref={carouselRef}
-          aria-label="Cortes em destaque"
+          aria-label="Carnes e kits em destaque"
           aria-roledescription="carrossel"
         >
           <div className="carousel-inner" aria-live="polite">
-            {highlightedProducts.map((product, index) => (
+            {highlightedItems.map((product, index) => (
               <div
                 className={index === 0 ? 'carousel-item active' : 'carousel-item'}
                 key={product.id}
                 role="group"
                 aria-roledescription="slide"
-                aria-label={index + 1 + ' de ' + highlightedProducts.length}
+                aria-label={index + 1 + ' de ' + highlightedItems.length}
               >
                 <ProductCard product={product} featured />
               </div>
@@ -50,12 +54,12 @@ export default function Highlights() {
               type="button"
               data-bs-target="#carrossel-destaques"
               data-bs-slide="prev"
-              aria-label="Corte anterior"
+              aria-label="Destaque anterior"
             >
               <span className="carousel-control-prev-icon" aria-hidden="true" />
             </button>
             <div className="carousel-indicators">
-              {highlightedProducts.map((product, index) => (
+              {highlightedItems.map((product, index) => (
                 <button
                   type="button"
                   key={product.id}
@@ -72,7 +76,7 @@ export default function Highlights() {
               type="button"
               data-bs-target="#carrossel-destaques"
               data-bs-slide="next"
-              aria-label="Próximo corte"
+              aria-label="Próximo destaque"
             >
               <span className="carousel-control-next-icon" aria-hidden="true" />
             </button>
