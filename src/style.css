@@ -480,13 +480,7 @@ main[id] {
 .catalog-landing {
   border-top: 1px solid var(--line);
   padding-bottom: 0;
-}
-.catalog-intro {
-  max-width: 450px;
-  font-size: 0.87rem;
-  margin: 0;
-}
-.catalog-filters {
+}.catalog-filters {
   display: flex;
   flex-wrap: wrap;
   align-items: center;

@@ -24,9 +24,6 @@ export default function Highlights() {
       <div className="container">
         <div className="section-heading">
           <h2 id="titulo-destaques">Carnes e kits em destaque</h2>
-          <a className="text-link" href="#cortes">
-            Ver todos os cortes
-          </a>
         </div>
         <div
           id="carrossel-destaques"

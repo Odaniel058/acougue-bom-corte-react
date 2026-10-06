@@ -17,16 +17,9 @@ export default function Catalog() {
     <section className="catalog-landing section-space" id="cortes" aria-labelledby="titulo-cortes">
       <div className="container">
         <div className="section-heading">
-          <div>
-            <p className="section-kicker">NOSSA SELEÇÃO</p>
-            <h2 id="titulo-cortes">
-              Nossos <em>cortes.</em>
-            </h2>
-          </div>
-          <p className="catalog-intro">
-            Conheça os cortes bovinos, suínos e aves do nosso catálogo, com descrições e sugestões
-            de preparo.
-          </p>
+          <h2 id="titulo-cortes">
+            Nossos <em>cortes.</em>
+          </h2>
         </div>
         <div className="catalog-filters" role="group" aria-label="Filtrar cortes por categoria">
           {filters.map((filter) => (
@@ -41,9 +34,6 @@ export default function Catalog() {
               {filter.label}
             </button>
           ))}
-          <a className="text-link ms-md-auto" href="#kits">
-            Ver kits de churrasco
-          </a>
         </div>
         <p className="catalog-count" role="status">
           {visibleProducts.length} opções de carnes · {kits.length} kits para churrasco
